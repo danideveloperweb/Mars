@@ -1,0 +1,67 @@
+
+<div style="text-align: center;"  *ngFor="let mart of ruta">
+  <p style="color: aliceblue;">Introduce las coordenadas utilizando grid-column:numero de celda para desplazarse en las X, más ; al acabar
+    y grid-row: numero de celda para desplazarese en las Y.</p>
+  <input type="text"  [(ngModel)]='mart.move'>
+</div>
+
+<div id="board">
+  <div id="overlay">
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+  </div>
+  <div id="soil">
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+    <span class="plot"></span>
+  </div>
+  <div id="action" >
+    <div class="bg" [style]="mart.move" >
+    </div>
+  </div>
+</div>
