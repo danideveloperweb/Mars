@@ -15,6 +15,18 @@
   background-image: url('/assets/img/marte.jpg');
   background-size: calc(10vw - 4px);
 }
+.alien {
+  background-image: url('/assets/img/alien.jpg');
+  background-size: calc(10vw - 4px);
+}
+.ovni {
+  background-image: url('/assets/img/ovni.jpg');
+  background-size: calc(10vw - 4px);
+}
+.nave {
+  background-image: url('/assets/img/nave.jpg');
+  background-size: calc(10vw - 4px);
+}
 #action, #soil, #overlay {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
