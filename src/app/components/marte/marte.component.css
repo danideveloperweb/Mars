@@ -1,4 +1,7 @@
-
+.container {
+  padding-top: 3%;
+  margin-bottom: 200px;
+}
 #board {
   position: sticky;
   width: 50vw;
@@ -33,7 +36,7 @@
   grid-template-rows: 20% 20% 20% 20% 20%;
   position: absolute;
   top: 10%;
-  left: 46%;
+  left: 17%;
   width: 100%;
   height: 100%;
 }
@@ -45,5 +48,19 @@
   height: 100%;
   background-position: left top;
   background-size: calc(10vw - 4px);
+}
+.regreso {
+  width: 200px;
+  position: absolute;
+  top: 36%;
+  left: 46%;
+  font-size:25px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #b8bdb8;
+  transition-duration: 0.4s;
+}
+.regreso:hover {
+  background-color: white;
 }
 

@@ -1,68 +1,72 @@
-<div style="text-align: center;" >
-  <p style="color: aliceblue;">Introduce las coordenadas utilizando grid-column:numero de celda para desplazarse en el
-    eje de las X, más ';'
-    al acabar y seguido añadir grid-row: numero de celda para desplazarese en las Y.</p>
-  <input type="text" [(ngModel)]='mart.coche'>
-</div>
+<div class="container">
+  <div style="text-align: center;" *ngIf="volvemos">
+    <p style="color: aliceblue;">Introduce las coordenadas utilizando grid-column:numero de celda para desplazarse en el
+      eje de las X, más ';'
+      al acabar y seguido añadir grid-row: numero de celda para desplazarese en las Y.</p>
+    <input type="text" [(ngModel)]='mart.coche'>
+  </div>
 
-<div id="board" >
-  <div id="overlay">
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-  </div>
-  <div id="soil">
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="alien"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="ovni"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="plot"></span>
-    <span class="nave"></span>
-  </div>
-  <div id="action">
-    <div class="bg" [style]="mart.coche">
-      {{ moveRuta()}}
+  <div id="board" *ngIf="volvemos">
+    <div id="overlay">
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+    </div>
+    <div id="soil">
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="alien"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="ovni"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="plot"></span>
+      <span class="nave"></span>
+    </div>
+    <div id="action">
+      <div class="bg" [style]="mart.coche">
+        {{ moveRuta()}}
+      </div>
     </div>
   </div>
 </div>
+<div></div>
+<input type="submit" value="Volver al planeta" (click)="vueltaMarte()" *ngIf="ApareceBoton" class="regreso">
